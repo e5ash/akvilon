@@ -1,0 +1,699 @@
+@import "sprite.sass"
+
+@font-face
+	font-family: "MuseoSansCyrl"
+    src: url("../fonts/MuseoSansCyrl-300.otf")
+	font-weight: 300
+
+@font-face
+	src: url("../fonts/MuseoSansCyrl-500.otf")
+	font-family: "MuseoSansCyrl"
+	font-weight: 500
+
+@font-face
+	src: url("../fonts/MuseoSansCyrl-500-italic.otf")
+	font-family: "MuseoSansCyrl"
+	font-weight: 500
+	font-style: italic
+
+@font-face
+	src: url("../fonts/MuseoSansCyrl-700.otf")
+	font-family: "MuseoSansCyrl"
+	font-weight: 700
+
+@font-face
+	src: url("../fonts/MuseoSansCyrl-900.otf")
+	font-family: "MuseoSansCyrl"
+	font-weight: 900
+
+$c-black: #0e3c5b
+$c-white: #fff
+$font-size: 15px
+$font-family: 'MuseoSansCyrl', sans-serif
+$zIndex-popup: 1000
+
+
+*
+	margin: 0
+	padding: 0
+
+body
+	font: $font-size $font-family
+	color: $c-black
+	background: $c-white
+	font-weight: 500
+	box-sizing: border-box
+
+html, body, header, article, aside, main, footer, div, h1, h2, h3, h4, h5, h6, button
+	display: block
+
+meta, script, style
+	display: none
+
+h1
+	text-align: center
+	margin-top: 10px
+	margin-bottom: 10px
+	font-size: 24px
+h2
+	font-size: 18px
+	text-transform: uppercase
+	font-weight: 700
+h3
+	font-size: 16px
+h4
+	font-size: 14px
+h5
+	font-size: 12px
+h6
+	font-size: 10px
+
+a
+	color: $c-black
+	text-decoration: none
+
+
+ul, ol
+	margin: 0
+
+
+li
+	display: inline-block
+	list-style: none
+
+
+::placeholder
+	color: gray
+
+
+.t-left
+	text-align: left
+
+.t-center
+	text-align: center
+
+.t-right
+	text-align: right
+
+.t-italic
+	font-style: italic
+
+.t-bold
+	font-weight: bold
+
+
+.b-left
+	float: left
+
+.b-right
+	float: right
+
+
+
+// Grid
+.container
+	position: relative
+	max-width: 1000px
+	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
+
+.row, .clearfix
+	&:before, &:after
+		display: table
+		content: ''
+		box-sizing: border-box
+	&:after
+		clear: both
+
+.w2 > .col
+	width: 50%
+.w3 > .col
+	width: 33.333333333%
+.w4 > .col
+	width: 25%
+.w5 > .col
+	width: 20%
+.w6 > .col
+	width: 16.666666667%
+.col
+	display: block
+	float: left
+	min-height: 1px
+
+
+
+
+// Form
+
+.input, .textarea, .button
+	display: block
+	outline: none
+	font-size: 12px
+	font-family: $font-family
+	width: 100%
+	box-sizing: border-box
+	background: $c-white
+
+
+.input
+	padding: 4px 10px
+	border: 1px solid #DCDCDC
+
+
+
+
+
+.button
+	background: url("../img/bg/btn.png") no-repeat center
+	border: none
+	text-align: center
+	width: 237px
+	height: 113px
+	color: $c-black
+	span
+		display: block
+		width: 178px
+		height: 43px
+		line-height: 40px
+		font-size: 15px
+		border-radius: 30px
+		margin-left: 45px
+		margin-bottom: 4px
+		background: url("../img/bg/btn-span.png") no-repeat center
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8)
+		cursor: pointer
+
+
+.textarea
+	resize: none
+
+
+
+
+
+
+
+
+// Elements
+	// Popup
+.popup
+    display: none
+
+.popup, .popup__bg
+    z-index: $zIndex-popup
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.popup__window
+    z-index: $zIndex-popup + 2
+    position: relative
+    width: 400px
+    height: 300px
+    margin-left: auto
+    margin-right: auto
+    background: $c-white
+
+.popup__container
+    height: 100%
+
+.popup__title
+    text-align: center
+
+.popup__close
+    position: absolute
+    top: 0
+    right: 0
+    width: 20px
+    height: 20px
+
+.popup__bg
+    z-index: $zIndex-popup + 1
+    position: fixed
+    background: rgba(0, 0, 0, .3)
+
+.wrapper
+	width: 1170px
+	margin-left: auto
+	margin-right: auto
+	background: #ffffff
+
+.price
+	span
+		font-size: 18px
+		font-weight: 700
+		color: #e42e2e
+
+.links
+	text-align: center
+	text-transform: uppercase
+	font-weight: 700
+	margin-bottom: 20px
+	li
+		display: block
+		width: 25%
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		float: left
+		&:last-of-type
+			a
+				&:after
+					display: none
+	a
+		position: relative
+		display: block
+		padding: 13px 0
+		color: white
+		background: #4F97C4
+		&:hover, &.select
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2873a3+0,25a4c4+50,2a74a4+100 */
+			background: #2873a3; /* Old browsers */
+			background: -moz-linear-gradient(left,  #2873a3 0%, #25a4c4 50%, #2a74a4 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #2873a3 0%,#25a4c4 50%,#2a74a4 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #2873a3 0%,#25a4c4 50%,#2a74a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2873a3', endColorstr='#2a74a4',GradientType=1 ); /* IE6-9 */
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			width: 1px
+			height: 30px
+			top: 7px
+			right: -0.5px
+			border-right: 1px dotted #ffffff
+
+
+
+.slick-arrow
+	opacity: .75
+	z-index: 1000
+	width: 40px
+	height: 40px
+	background: #5097C4 !important
+	border-radius: 50%
+	transition: .3s
+	&:hover
+		opacity: 1
+	&:before
+		display: none
+
+	&.slick-prev
+		i
+			margin-right: 2px
+	&.slick-next
+		i
+			margin-left: 5px
+
+
+body
+	background: url('../img/bg/bg.jpg') center top no-repeat
+	background-size: cover
+	background-attachment: fixed
+
+header
+	padding-top: 30px
+	.panel
+		padding-left: 35px
+		margin-bottom: 5px
+	.logo
+		margin-right: 40px
+	.desc
+		width: 205px
+		font-size: 15px
+		margin-right: 145px
+		font-style: italic
+
+	.phones
+		font-size: 19px
+		line-height: 30px
+		p
+			&:nth-of-type(1)
+				margin-bottom: 10px
+		i
+			position: relative
+			top: -2px
+			margin-right: 6px
+		span
+			font-weight: 700
+	.button-block
+		.button
+			margin-top: -15px
+
+	.nav
+		margin-left: 35px
+		margin-right: 35px
+		text-align: center
+		border-top: 1px dotted #81919B
+		border-bottom: 1px dotted #81919B
+		margin-bottom: 15px
+		i
+			transition: .3s
+		> ul
+			> li
+				position: relative
+				width: 152px
+				background: transparent
+				&:after
+					position: absolute
+					content: ''
+					display: inline-block
+					height: 35px
+					width: 1px
+					right: 0
+					top: 8px
+					border-right: 1px dotted #81919B
+					vertical-align: middle
+				&:before
+					content: ''
+					position: absolute
+					z-index: 100
+					width: 158px
+					height: 30px
+					//background: #000
+					left: 0
+					bottom: -20px
+				&:last-of-type
+					&:after
+						display: none
+				&.select, &:hover
+					background: url('../img/bg/nav.png') no-repeat center
+					a
+						color: white
+					i
+						@include sprite($arrow-down-hover)
+				&:hover
+					ul
+						display: block
+					i
+						transform: rotate(180deg)
+				i
+					margin-right: 5px
+					position: relative
+					top: -1px
+				a
+					padding: 16px 0
+					display: block
+
+			ul
+				z-index: 1010
+				display: none
+				position: absolute
+				top: 60px
+				left: -6px
+				text-align: left
+				color: white
+				background: #4F97C4
+				width: 270px
+				padding-top: 12px
+				padding-bottom: 12px
+				&:before
+					position: absolute
+					content: ''
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 0 5.5px 5px 5.5px
+					border-color: transparent transparent #4F97C4 transparent
+					top: -5.5px
+					left: 18px
+				li
+					display: block
+					a
+						position: relative
+						display: block
+						padding: 7px 20px 5px 30px
+						transition: .3s
+						&:before
+							content: ''
+							@include sprite($arrow-down-hover)
+							position: absolute
+							transform: rotate(-90deg)
+							top: 13px
+							left: 20px
+						&:hover
+							background: #406BAA
+				a
+					color: white
+					padding: 0
+		.nav-button
+			display: none
+			padding-top: 14px
+			padding-bottom: 14px
+			cursor: pointer
+			//width: 100px
+		.nav-button__sticks
+			float: left
+			margin-right: 10px
+			span
+				display: block
+				width: 30px
+				height: 2px
+				background: #0e3c5b
+				border-radius: 5px
+				margin-bottom: 8px
+		.nav-button__text
+			font-size: 16px
+			text-align: left
+			margin-left: 15px
+			padding-top: 2px
+
+	.slider
+		margin-left: 35px
+		margin-right: 35px
+		margin-bottom: 18px
+		.item
+			position: relative
+		.plashka
+			position: absolute
+			top: 35px
+			left: 65px
+			background: url('../img/bg/plashka.png')
+			width: 300px
+			height: 395px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			text-align: center
+			.title
+				margin-top: 50px
+				margin-bottom: 10px
+				font-size: 30px
+				font-weight: 900
+				text-transform: uppercase
+			.text
+				padding-left: 29px
+				padding-right: 29px
+				color: #0e3c5b
+		.slick-arrow
+			top: auto
+			bottom: 32px
+			&.slick-prev
+				left: auto
+				right: 80px
+			&.slick-next
+				right: 37px
+// main
+#main
+	padding-left: 35px
+	padding-right: 35px
+	padding-bottom: 35px
+	.about
+		background: #4F97C4
+		color: white
+		text-align: center
+		padding-top: 15px
+		padding-bottom: 15px
+		padding-right: 15px
+		.col
+			position: relative
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				width: 1px
+				height: 95px
+				border-right: 1px dotted white
+				top: 0
+				right: 0
+			&:last-of-type
+				&:after
+					display: none
+		.img-wrap
+			line-height: 51px
+			vertical-align: middle
+			img
+				vertical-align: middle
+		p
+			text-transform: uppercase
+			margin-top: 10px
+			padding-left: 10px
+			padding-right: 10px
+	.rooms-index
+		text-align: center
+		.name
+			margin-top: 10px
+			margin-bottom: 3px
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 700
+
+		.button
+			position: relative
+			margin-top: -12px
+			margin-left: auto
+			margin-right: auto
+			left: -15px
+
+	.rooms
+		.item
+			padding-top: 20px
+			padding-bottom: 20px
+			border-bottom: 1px dotted #8E9CA5
+			&:first-of-type
+				padding-top: 0
+			&:last-of-type
+				padding-bottom: 0
+				border-bottom: none
+
+		.slider-mini
+			width: 345px
+			img
+				width: 100%
+			.slick-arrow
+				top: auto
+				bottom: 0px
+			.slick-next
+				right: 10px
+			.slick-prev
+				left: auto
+				right: 55px
+		.data
+			width: 435px
+			margin-left: 35px
+			h2
+				margin-top: 10px
+				margin-bottom: 15px
+			p
+				margin-bottom: 10px
+				&:last-of-type
+					margin-bottom: 0
+		.button-block
+			float: right
+			text-align: center
+			padding-right: 30px
+			padding-top: 50px
+			.price
+				padding-left: 15px
+				font-weight: 700
+				margin-bottom: -10px
+		.icons
+			margin-top: 20px
+			p
+				z-index: 10
+				display: none
+				position: absolute
+				width: 250px
+				top: -55px
+				left: -105px
+				color: white
+				background: #4F97C4
+				padding: 0 20px !important
+				margin: 0 !important
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				//text-align: left
+				&:after
+					position: absolute
+					content: ''
+					width: 0
+					height: 0
+					left: 120px
+					bottom: -6px
+					border-style: solid
+					border-width: 6px 5.5px 0 5.5px
+					border-color: #4f97c4 transparent transparent transparent
+			.col
+				position: relative
+				width: 40px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				border: 1px solid #4F97C4
+				border-radius: 50%
+				margin-right: 5px
+				cursor: pointer
+				&:last-of-type
+					margin-right: 0
+				&:hover
+					background: #4F97C4
+					p
+						display: block
+			.item-food
+				&:hover
+					.icon
+						@include sprite($food-hover)
+			.item-phone-big
+				&:hover
+					.icon
+						@include sprite($phone-hover)
+			.item-hair-dryer
+				&:hover
+					.icon
+						@include sprite($hair-dryer-hover)
+			.item-single-bed
+				&:hover
+					.icon
+						@include sprite($single-bed-hover)
+			.item-fridge
+				&:hover
+					.icon
+						@include sprite($fridge-hover)
+			.item-tv
+				&:hover
+					.icon
+						@include sprite($tv-hover)
+			.item-baby-bed
+				&:hover
+					.icon
+						@include sprite($baby-bed-hover)
+			.item-single-bed
+				&:hover
+					.icon
+						@include sprite($single-bed-hover)
+footer
+	color: white
+	background: #053065
+	font-weight: 300
+	padding: 30px 35px
+	a
+		color: white
+	.left
+		margin-right: 210px
+	.copy
+		margin-bottom: 20px
+	.socials
+		a
+			margin-right: 3px
+	.sub-nav-1
+		margin-right: 80px
+	.sub-nav
+		li
+			display: block
+			margin-bottom: 8px
+			a
+				border-bottom: 1px solid white
+	.contacts
+		float: right
+
+		.icon-wrap
+			display: inline-block
+			width: 20px
+			text-align: center
+			margin-right: 12px
+		p
+			margin-bottom: 10px

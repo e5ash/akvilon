@@ -1,0 +1,249 @@
+@media screen and (max-width: 1190px) {
+  .wrapper {
+    width: 100%; }
+  header .desc {
+    margin-right: 7%; }
+  header .nav > ul > li {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px; }
+    header .nav > ul > li:hover, header .nav > ul > li.select {
+      background: none !important; }
+      header .nav > ul > li:hover > a, header .nav > ul > li.select > a {
+        color: #0e3c5b; }
+        header .nav > ul > li:hover > a i, header .nav > ul > li.select > a i {
+          background-image: url(../img/sprite.png);
+          background-position: -111px -85px;
+          width: 9px;
+          height: 5px; }
+  #main .rooms .slider-mini {
+    width: 35%;
+    margin-right: 5%; }
+  #main .rooms .data {
+    margin-left: 0;
+    width: 60%; }
+  #main .rooms .button-block {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px; }
+    #main .rooms .button-block .button {
+      margin-left: auto;
+      margin-right: auto;
+      left: 14px; } }
+
+@media screen and (max-width: 1095px) {
+  header .panel {
+    height: 170px; }
+  header .desc {
+    position: absolute;
+    top: 125px;
+    left: 35px;
+    width: 278px; }
+    header .desc br {
+      display: none; }
+  header .phones {
+    margin-left: 12%;
+    padding-top: 45px; }
+  header .button-block {
+    position: absolute;
+    top: 70px;
+    right: 35px; }
+  footer .left {
+    margin-right: 10%; } }
+
+@media screen and (max-width: 1005px) {
+  header .nav > ul > li {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #main .about {
+    padding-right: 0; }
+    #main .about .col {
+      width: 33.3333%;
+      margin-bottom: 10px; }
+      #main .about .col:nth-of-type(3n):after {
+        display: none; } }
+
+@media screen and (max-width: 980px) {
+  header .phones {
+    margin-left: 5%; } }
+
+@media screen and (max-width: 910px) {
+  header .panel {
+    padding-left: 15px; }
+  header .desc {
+    left: 15px; }
+  header .phones {
+    padding-top: 0;
+    position: absolute;
+    right: 15px;
+    margin-left: 0; }
+    header .phones p {
+      line-height: normal; }
+      header .phones p:nth-of-type(1) {
+        margin-bottom: 2px; }
+  header .button-block {
+    top: 90px;
+    right: 15px; }
+  header .nav, header .slider {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  header .nav > ul > li:before {
+    width: 120px; }
+  header .nav > ul ul {
+    width: 220px; }
+  #main {
+    padding-left: 15px;
+    padding-right: 15px; }
+    #main .rooms-index .col {
+      width: 45%;
+      float: none;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 30px; }
+      #main .rooms-index .col:last-of-type {
+        margin-bottom: 0; }
+  footer .left {
+    margin-right: 0; }
+  footer .sub-nav-1, footer .sub-nav-2 {
+    display: none; } }
+
+@media screen and (max-width: 865px) {
+  header .nav > ul > li {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+@media screen and (max-width: 725px) {
+  header .nav > ul {
+    display: none;
+    text-align: left;
+    padding-bottom: 10px; }
+    header .nav > ul > li {
+      padding-left: 0;
+      padding-right: 0; }
+    header .nav > ul li {
+      display: block; }
+      header .nav > ul li > a {
+        padding-top: 7px;
+        padding-bottom: 7px; }
+      header .nav > ul li i {
+        display: none; }
+      header .nav > ul li:after {
+        display: none; }
+      header .nav > ul li ul {
+        display: block !important;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-bottom: 10px;
+        width: 100% !important; }
+        header .nav > ul li ul:before {
+          display: none; }
+        header .nav > ul li ul a {
+          color: #0e3c5b !important;
+          padding-left: 10px;
+          background: transparent !important; }
+          header .nav > ul li ul a:before {
+            display: none; }
+  header .nav .nav-button {
+    display: block; } }
+
+@media screen and (max-width: 675px) {
+  #main .rooms .slider-mini {
+    width: 100%;
+    margin-right: 0; }
+  #main .rooms .data {
+    margin-left: 0;
+    width: 100%; }
+    #main .rooms .data .col {
+      margin-bottom: 10px; }
+    #main .rooms .data .icons p {
+      display: none !important; }
+  #main .rooms .button-block {
+    width: 100%;
+    padding-top: 20px; } }
+
+@media screen and (max-width: 660px) {
+  #main .rooms-index .col {
+    width: 100%;
+    float: none;
+    display: block; } }
+
+@media screen and (max-width: 600px) {
+  header {
+    padding-top: 20px; }
+    header .panel {
+      height: auto;
+      padding-left: 0; }
+    header .logo, header .desc, header .phones, header .button-block {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: auto;
+      float: none;
+      padding-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 295px;
+      text-align: center; }
+    header .desc {
+      text-align: left; }
+    header .button-block .button {
+      position: relative;
+      left: 15px; }
+  footer .left {
+    float: none;
+    width: 100%;
+    text-align: center; }
+  footer .contacts {
+    display: none; } }
+
+@media screen and (max-width: 540px) {
+  header .slider .slick-arrow {
+    display: none !important; }
+  header .slider img {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  header .slider .plashka {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    header .slider .plashka .title {
+      margin-top: 0;
+      padding-top: 55px; } }
+
+@media screen and (max-width: 500px) {
+  #main .about {
+    padding-top: 40px; }
+    #main .about .col {
+      width: 50%;
+      margin-bottom: 30px;
+      height: 90px; }
+      #main .about .col:nth-of-type(odd):after {
+        display: none !important; }
+      #main .about .col:nth-of-type(2n):after {
+        display: none; }
+  .links li {
+    width: 50%; } }
+
+@media screen and (max-width: 370px) {
+  header .slider {
+    padding-right: 0;
+    padding-left: 0; }
+  #main .about {
+    padding-top: 40px; }
+    #main .about .col {
+      width: 100%;
+      margin-bottom: 20px; } }
